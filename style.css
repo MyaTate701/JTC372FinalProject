@@ -193,7 +193,7 @@ nav a:hover {
     margin-bottom: 30px;
 }
 
-.contact a {
+.contact a.btn {
     display: inline-block;
     background-color: #B98787;
     color: white;
@@ -202,7 +202,7 @@ nav a:hover {
     border-radius: 25px;
 }
 
-.contact a:hover {
+.contact a.btn:hover {
     background-color: #403633;
 }
 
