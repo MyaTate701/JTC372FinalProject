@@ -88,3 +88,39 @@ nav a:hover {
     max-width: 700px;
     margin: 20px auto;
 }
+.skills {
+    background-color: #FAF7F2;
+    padding: 60px 10%;
+    text-align: center;
+}
+
+.skills h2 {
+    font-family: Georgia, serif;
+    font-size: 40px;
+    font-weight: normal;
+    margin-bottom: 40px;
+}
+
+.skills-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.skill-card {
+    background-color: #E8D8D4;
+    padding: 30px;
+    border-radius: 15px;
+}
+
+.skill-card h3 {
+    font-family: Georgia, serif;
+    font-size: 25px;
+    font-weight: normal;
+    color: #403633;
+}
+
+.skill-card p {
+    font-size: 16px;
+    line-height: 1.6;
+}
