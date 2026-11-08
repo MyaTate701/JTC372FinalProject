@@ -2,171 +2,165 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Projects | Mya Tate</title>
-    <link rel="stylesheet" href="style.css?v=3">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Projects | Mya Tate</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css?v=5">
 </head>
-<body>
+<body class="page-projects">
 
-<header>
-    <nav class="site-nav" aria-label="Main navigation">
-        <a class="site-name" href="index.html">Mya Tate</a>
-        <div class="nav-links">
-            <a href="index.html">Home</a>
-            <a href="about.html">About</a>
-            <a href="experience.html">Experience</a>
-            <a href="projects.html" aria-current="page">Projects</a>
-            <a href="contact.html">Contact</a>
-        </div>
-    </nav>
+<header class="site-header">
+  <nav class="site-nav" aria-label="Main navigation">
+    <a class="site-name" href="index.html">Mya Tate</a>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="experience.html">Experience</a>
+      <a href="projects.html" aria-current="page">Projects</a>
+      <a href="contact.html">Contact</a>
+    </div>
+  </nav>
 </header>
 
 <main>
-    <section class="page-intro botanical-section">
-        <p class="eyebrow">MY WORK</p>
-        <h1>Projects & Coursework</h1>
-        <div class="heading-line"></div>
+  <section class="page-hero decorated">
+    <p class="eyebrow">MY WORK</p>
+    <h1>Projects & Coursework</h1>
+    <p>
+      A collection of programming projects and technical
+      skills developed throughout my Computer Science studies.
+    </p>
+  </section>
+
+  <section class="content-section section-cream">
+    <div class="section-title">
+      <p class="eyebrow">JAVA</p>
+      <h2>Computer Systems</h2>
+    </div>
+
+    <div class="card-grid three-col">
+      <article class="info-card">
+        <h3>TCP Client/Server Communication</h3>
         <p>
-            A collection of programming projects
-            and technical skills developed throughout
-            my Computer Science studies.
+          Developed a networking program using TCP sockets
+          to exchange messages between connected clients.
         </p>
-    </section>
+        <span class="tag">Java | CS 250</span>
+      </article>
 
-    <section class="section blush-section">
-        <div class="section-heading">
-            <p class="eyebrow">JAVA</p>
-            <h2>Computer Systems</h2>
-            <div class="heading-line"></div>
-        </div>
+      <article class="info-card">
+        <h3>Number System Converter</h3>
+        <p>
+          Created a program to perform number system
+          conversions and bitwise operations using binary,
+          decimal, and hexadecimal values.
+        </p>
+        <span class="tag">Java | CS 250</span>
+      </article>
 
-        <div class="card-grid three-columns">
-            <article class="info-card">
-                <h3>TCP Client/Server Communication</h3>
-                <p>
-                    Developed a networking program using
-                    TCP sockets to exchange messages
-                    between connected clients.
-                </p>
-                <span class="tag">Java | CS 250</span>
-            </article>
+      <article class="info-card">
+        <h3>Memory Performance Analysis</h3>
+        <p>
+          Compared the performance of different data
+          structures and memory access patterns
+          by measuring execution times.
+        </p>
+        <span class="tag">Java | CS 250</span>
+      </article>
+    </div>
+  </section>
 
-            <article class="info-card">
-                <h3>Number System Converter</h3>
-                <p>
-                    Created a program to perform number
-                    system conversions and bitwise operations
-                    using binary, decimal, and hexadecimal values.
-                </p>
-                <span class="tag">Java | CS 250</span>
-            </article>
+  <section class="content-section section-blush">
+    <div class="section-title">
+      <p class="eyebrow">PYTHON</p>
+      <h2>Algorithms & Data Structures</h2>
+    </div>
 
-            <article class="info-card">
-                <h3>Memory Performance Analysis</h3>
-                <p>
-                    Compared the performance of different
-                    data structures and memory access patterns
-                    by measuring execution times.
-                </p>
-                <span class="tag">Java | CS 250</span>
-            </article>
-        </div>
-    </section>
+    <div class="card-grid three-col">
+      <article class="info-card">
+        <h3>Knight's Tour</h3>
+        <p>
+          Used recursion and backtracking to find a path
+          for a knight to visit every square on a
+          chessboard without repeating a square.
+        </p>
+        <span class="tag">Python | CS 320</span>
+      </article>
 
-    <section class="section cream-section">
-        <div class="section-heading">
-            <p class="eyebrow">PYTHON</p>
-            <h2>Algorithms & Data Structures</h2>
-            <div class="heading-line"></div>
-        </div>
+      <article class="info-card">
+        <h3>Binary Heap</h3>
+        <p>
+          Implemented a binary heap with insertion
+          and extraction operations to practice
+          working with priority queues.
+        </p>
+        <span class="tag">Python | CS 320</span>
+      </article>
 
-        <div class="card-grid three-columns">
-            <article class="info-card">
-                <h3>Knight's Tour</h3>
-                <p>
-                    Used recursion and backtracking to find
-                    a path for a knight to visit every square
-                    on a chessboard without repeating a square.
-                </p>
-                <span class="tag">Python | CS 320</span>
-            </article>
+      <article class="info-card">
+        <h3>Longest Increasing Path</h3>
+        <p>
+          Worked with a torus-shaped grid to find
+          increasing paths using memoization
+          and neighboring cell comparisons.
+        </p>
+        <span class="tag">Python | CS 320</span>
+      </article>
 
-            <article class="info-card">
-                <h3>Binary Heap</h3>
-                <p>
-                    Implemented a binary heap with insertion
-                    and extraction operations to practice
-                    working with priority queues.
-                </p>
-                <span class="tag">Python | CS 320</span>
-            </article>
+      <article class="info-card">
+        <h3>Trie Data Structure</h3>
+        <p>
+          Built a trie to store and search strings
+          using operations such as adding, removing,
+          and checking prefixes.
+        </p>
+        <span class="tag">Python | CS 320</span>
+      </article>
 
-            <article class="info-card">
-                <h3>Longest Increasing Path</h3>
-                <p>
-                    Worked with a torus-shaped grid to find
-                    increasing paths using memoization
-                    and neighboring cell comparisons.
-                </p>
-                <span class="tag">Python | CS 320</span>
-            </article>
+      <article class="info-card">
+        <h3>Round Trip</h3>
+        <p>
+          Used the Bellman-Ford algorithm to find
+          routes through a graph while avoiding
+          reuse of edges on the return trip.
+        </p>
+        <span class="tag">Python | CS 320</span>
+      </article>
+    </div>
+  </section>
 
-            <article class="info-card">
-                <h3>Trie Data Structure</h3>
-                <p>
-                    Built a trie to store and search strings
-                    using operations such as adding, removing,
-                    and checking prefixes.
-                </p>
-                <span class="tag">Python | CS 320</span>
-            </article>
+  <section class="content-section section-cream">
+    <div class="section-title">
+      <p class="eyebrow">WEB DESIGN</p>
+      <h2>Creative & Technical Work</h2>
+    </div>
 
-            <article class="info-card">
-                <h3>Round Trip</h3>
-                <p>
-                    Used the Bellman-Ford algorithm to find
-                    routes through a graph while avoiding
-                    reuse of edges on the return trip.
-                </p>
-                <span class="tag">Python | CS 320</span>
-            </article>
-        </div>
-    </section>
-
-    <section class="section blush-section">
-        <div class="section-heading">
-            <p class="eyebrow">WEB DESIGN</p>
-            <h2>Creative & Technical Work</h2>
-            <div class="heading-line"></div>
-        </div>
-
-        <div class="card-grid single-column">
-            <article class="info-card">
-                <h3>Personal Career Portfolio</h3>
-                <p>
-                    Designed and developed a responsive
-                    career portfolio using HTML, CSS,
-                    and GitHub Pages to showcase my
-                    education, professional experience,
-                    and programming projects.
-                </p>
-                <span class="tag">HTML & CSS | JTC 372</span>
-            </article>
-        </div>
-    </section>
+    <div class="card-grid one-col">
+      <article class="info-card">
+        <h3>Personal Career Portfolio</h3>
+        <p>
+          Designed and developed a responsive career
+          portfolio using HTML, CSS, and GitHub Pages
+          to showcase my education, professional
+          experience, and programming projects.
+        </p>
+        <span class="tag">HTML & CSS | JTC 372</span>
+      </article>
+    </div>
+  </section>
 </main>
 
-<footer>
-    <p>&copy; 2026 Mya Tate. All rights reserved.</p>
-    <p>
-        <a href="mailto:tmya3387@gmail.com">Email</a>
-        <span>•</span>
-        <a href="tel:+12082413387">Phone</a>
-        <span>•</span>
-        <a href="https://www.linkedin.com/in/mya-tate-alec"
-           target="_blank" rel="noopener noreferrer">LinkedIn</a>
-    </p>
+<footer class="site-footer">
+  <p>&copy; 2026 Mya Tate. All rights reserved.</p>
+  <p>
+    <a href="mailto:tmya3387@gmail.com">Email</a> ·
+    <a href="tel:+12082413387">Phone</a> ·
+    <a href="https://www.linkedin.com/in/mya-tate-alec"
+       target="_blank" rel="noopener noreferrer">LinkedIn</a>
+  </p>
 </footer>
 
 </body>
