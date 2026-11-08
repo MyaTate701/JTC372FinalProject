@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mya Tate | Career Portfolio</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css?v=3">
 </head>
 <body>
 
@@ -13,7 +13,7 @@
     <nav class="site-nav" aria-label="Main navigation">
         <a class="site-name" href="index.html">Mya Tate</a>
         <div class="nav-links">
-            <a href="index.html">Home</a>
+            <a href="index.html" aria-current="page">Home</a>
             <a href="about.html">About</a>
             <a href="experience.html">Experience</a>
             <a href="projects.html">Projects</a>
@@ -23,143 +23,157 @@
 </header>
 
 <main>
-
-    <section class="hero">
+    <section class="hero botanical-section">
         <div class="hero-text">
-            <p>WELCOME TO MY PORTFOLIO</p>
+            <p class="eyebrow">WELCOME TO MY PORTFOLIO</p>
             <h1>Hi, I'm Mya.</h1>
-            <h2>Computer Science Student & Quality Assurance Professional</h2>
+            <h2>Computer Science | Quality Assurance</h2>
+            <div class="ornament">✦</div>
             <p>
-                I'm passionate about problem-solving, learning new
-                technologies, and finding ways to improve the world
-                around me.
+                I'm passionate about problem-solving, learning
+                new technologies, and finding ways to improve
+                the world around me.
             </p>
-            <a href="#about">Get to Know Me</a>
+            <a class="text-link" href="#about">Get to Know Me →</a>
         </div>
     </section>
 
-    <section id="about" class="about">
-        <h2>A Little About Me</h2>
-        <p>
-            I'm currently pursuing my bachelor's degree in
-            Computer Science at Colorado State University
-            while working as a Senior Quality Assurance
-            Technician at Thermo Fisher Scientific.
-        </p>
-        <p>
-            My background in quality assurance has helped me
-            develop strong attention to detail, problem-solving
-            skills, and an interest in continuous improvement.
-            I'm excited to continue growing my skills in
-            technology and software development.
-        </p>
+    <section id="about" class="section blush-section">
+        <div class="section-heading">
+            <p class="eyebrow">THE PERSON BEHIND THE PORTFOLIO</p>
+            <h2>A Little About Me</h2>
+            <div class="heading-line"></div>
+        </div>
+        <div class="narrow-content">
+            <p>
+                I'm currently pursuing my bachelor's degree in
+                Computer Science at Colorado State University
+                while working as a Senior Quality Assurance
+                Technician at Thermo Fisher Scientific.
+            </p>
+            <p>
+                My background in quality assurance has helped
+                me develop strong attention to detail,
+                problem-solving skills, and an interest in
+                continuous improvement.
+            </p>
+            <a class="text-link" href="about.html">More About Me →</a>
+        </div>
     </section>
 
-    <section id="experience" class="skills">
-        <h2>What I Bring to the Table</h2>
+    <section class="section cream-section">
+        <div class="section-heading">
+            <p class="eyebrow">SKILLS & STRENGTHS</p>
+            <h2>What I Bring to the Table</h2>
+            <div class="heading-line"></div>
+        </div>
 
-        <div class="skills-container">
-
-            <div class="skill-card">
+        <div class="card-grid two-columns">
+            <article class="info-card">
                 <h3>Computer Science</h3>
                 <p>
                     Experience with Java, Python, C++,
                     HTML, and CSS through coursework
                     and programming projects.
                 </p>
-            </div>
+            </article>
 
-            <div class="skill-card">
+            <article class="info-card">
                 <h3>Quality Assurance</h3>
                 <p>
                     Professional experience in quality
                     assurance, documentation, and
                     maintaining quality standards.
                 </p>
-            </div>
+            </article>
 
-            <div class="skill-card">
+            <article class="info-card">
                 <h3>Problem Solving</h3>
                 <p>
-                    Strong analytical skills and attention
+                    Analytical thinking and attention
                     to detail developed through technical
                     coursework and professional experience.
                 </p>
-            </div>
+            </article>
 
-            <div class="skill-card">
+            <article class="info-card">
                 <h3>Continuous Learning</h3>
                 <p>
                     Dedicated to developing new technical
                     skills and applying them to
                     real-world challenges.
                 </p>
-            </div>
-
+            </article>
         </div>
     </section>
 
-    <section id="projects" class="projects">
-        <h2>Featured Projects</h2>
-        <p class="projects-intro">
-            A collection of projects I've worked on
-            throughout my Computer Science studies.
-        </p>
+    <section class="section blush-section">
+        <div class="section-heading">
+            <p class="eyebrow">SELECTED WORK</p>
+            <h2>Featured Projects</h2>
+            <div class="heading-line"></div>
+        </div>
 
-        <div class="projects-container">
-
-            <div class="project-card">
+        <div class="card-grid three-columns">
+            <article class="info-card">
                 <h3>Song Recommendation System</h3>
                 <p>
-                    An ongoing Java project focused on analyzing
-                    song ratings and recommending music
-                    based on user preferences.
+                    An ongoing Java project focused on
+                    analyzing song ratings and recommending
+                    music based on user preferences.
                 </p>
-                <span>Java</span>
-            </div>
+                <span class="tag">Java</span>
+            </article>
 
-            <div class="project-card">
+            <article class="info-card">
                 <h3>Algorithms & Data Structures</h3>
                 <p>
                     Python projects exploring algorithms,
                     data structures, and problem-solving
                     techniques.
                 </p>
-                <span>Python</span>
-            </div>
+                <span class="tag">Python</span>
+            </article>
 
-            <div class="project-card">
+            <article class="info-card">
                 <h3>Machine Learning</h3>
                 <p>
-                    An ongoing sentiment analysis project using
-                    machine learning to classify
+                    An ongoing sentiment analysis project
+                    using machine learning to classify
                     customer reviews.
                 </p>
-                <span>Python</span>
-            </div>
+                <span class="tag">Python</span>
+            </article>
+        </div>
 
+        <div class="center-link">
+            <a class="text-link" href="projects.html">Explore All Projects →</a>
         </div>
     </section>
 
-    <section id="contact" class="contact">
-        <h2>Let's Connect</h2>
+    <section class="section contact-preview botanical-section">
+        <div class="section-heading">
+            <p class="eyebrow">LET'S CONNECT</p>
+            <h2>Let's Stay in Touch</h2>
+            <div class="heading-line"></div>
+        </div>
         <p>
-            Interested in connecting or learning more
-            about my experience? I'd love to hear from you!
+            Interested in connecting or learning more about
+            my experience? I'd love to hear from you.
         </p>
-        <a class="btn" href="mailto:tmya3387@gmail.com">
-            Email Me
-        </a>
+        <a class="text-link" href="contact.html">Contact Information →</a>
     </section>
-
 </main>
 
 <footer>
     <p>&copy; 2026 Mya Tate. All rights reserved.</p>
     <p>
-        <a href="mailto:tmya3387@gmail.com">tmya3387@gmail.com</a> |
-        <a href="contact.html">Contact</a> |
-        <a href="index.html">Back to Home</a>
+        <a href="mailto:tmya3387@gmail.com">Email</a>
+        <span>•</span>
+        <a href="tel:+12082413387">Phone</a>
+        <span>•</span>
+        <a href="https://www.linkedin.com/in/mya-tate-alec"
+           target="_blank" rel="noopener noreferrer">LinkedIn</a>
     </p>
 </footer>
 
