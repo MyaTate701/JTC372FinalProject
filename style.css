@@ -174,3 +174,51 @@ nav a:hover {
     font-size: 13px;
     margin-top: 15px;
 }
+.contact {
+    background-color: #FAF7F2;
+    padding: 70px 10%;
+    text-align: center;
+}
+
+.contact h2 {
+    font-family: Georgia, serif;
+    font-size: 40px;
+    font-weight: normal;
+    color: #403633;
+}
+
+.contact p {
+    font-size: 16px;
+    line-height: 1.8;
+    margin-bottom: 30px;
+}
+
+.contact a {
+    display: inline-block;
+    background-color: #B98787;
+    color: white;
+    padding: 12px 30px;
+    text-decoration: none;
+    border-radius: 25px;
+}
+
+.contact a:hover {
+    background-color: #403633;
+}
+
+footer {
+    background-color: #E8D8D4;
+    text-align: center;
+    padding: 20px;
+    font-size: 14px;
+}
+
+footer a {
+    color: #403633;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+footer a:hover {
+    color: #B98787;
+}
