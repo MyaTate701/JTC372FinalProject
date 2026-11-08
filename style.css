@@ -255,3 +255,65 @@ footer a:hover {
     }
 
 }
+
+/* Navigation Fix */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+.nav-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+/* Mobile Layout */
+@media screen and (max-width: 768px) {
+
+    nav {
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        gap: 10px;
+    }
+
+    nav h2 {
+        margin: 0;
+    }
+
+    nav a {
+        display: inline-block;
+        margin: 5px;
+    }
+
+    .nav-links {
+        justify-content: center;
+        gap: 5px;
+    }
+
+    .skills-container,
+    .projects-container {
+        grid-template-columns: 1fr;
+    }
+
+    .hero {
+        flex-direction: column;
+        padding: 40px 5%;
+    }
+
+    .hero-text h1 {
+        font-size: 42px;
+    }
+}
+
