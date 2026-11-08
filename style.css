@@ -222,3 +222,36 @@ footer a {
 footer a:hover {
     color: #B98787;
 }
+
+/* Mobile Navigation */
+@media screen and (max-width: 768px) {
+
+    header {
+        padding: 15px;
+    }
+
+    nav {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .nav-links {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+        padding: 0;
+        margin: 0;
+        list-style: none;
+    }
+
+    nav a {
+        margin: 5px;
+        font-size: 14px;
+    }
+
+    .logo {
+        text-align: center;
+    }
+
+}
