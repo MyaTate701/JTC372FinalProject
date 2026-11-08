@@ -1,540 +1,576 @@
 
-/* =====================================
-   MYA TATE | CAREER PORTFOLIO
-   ===================================== */
+/* MYA TATE | CAREER PORTFOLIO */
 
-/* Website Colors */
+/* Colors */
 :root {
-    --cream: #FAF7F2;
-    --blush: #E8D8D4;
-    --rose: #B98787;
-    --espresso: #403633;
-    --white: #FFFEFC;
+  --cream: #FAF7F2;
+  --blush: #E8D8D4;
+  --rose: #B98787;
+  --brown: #403633;
+  --paper: #FFFEFC;
+  --deep-rose: #865B5B;
 }
 
-/* General Styling */
+/* General */
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 html {
-    scroll-behavior: smooth;
+  scroll-behavior: smooth;
 }
 
 body {
-    margin: 0;
-    background: var(--cream);
-    color: var(--espresso);
-    font-family: Arial, sans-serif;
-    line-height: 1.7;
-    overflow-wrap: break-word;
+  margin: 0;
+  background: var(--cream);
+  color: var(--brown);
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.75;
+  overflow-wrap: break-word;
 }
 
 h1, h2, h3 {
-    font-family: Georgia, serif;
-    font-weight: normal;
-    line-height: 1.3;
+  font-family: Georgia, serif;
+  font-weight: normal;
+  line-height: 1.3;
 }
 
 a {
-    color: inherit;
+  color: inherit;
 }
 
 a:focus-visible {
-    outline: 2px solid var(--rose);
-    outline-offset: 4px;
+  outline: 2px solid var(--deep-rose);
+  outline-offset: 4px;
 }
 
-/* =====================================
-   HEADER & NAVIGATION
-   ===================================== */
-
-header {
-    background: var(--blush);
-    padding: 18px 5%;
-    border-bottom: 1px solid rgba(64, 54, 51, 0.1);
+/* Navigation */
+.site-header {
+  background: var(--blush);
+  border-bottom: 1px solid #cbaaa6;
+  padding: 14px 5%;
 }
 
 .site-nav {
-    max-width: 1200px;
-    margin: auto;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 24px;
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 24px;
 }
 
 .site-name {
-    font-family: "Brush Script MT",
-                 "Segoe Script",
-                 Georgia, serif;
-    font-size: 32px;
-    font-weight: normal;
-    text-decoration: none;
-    white-space: nowrap;
-    line-height: 1.3;
+  font-family: "Great Vibes", Georgia, serif;
+  font-size: 37px;
+  line-height: 1.3;
+  text-decoration: none;
+  white-space: nowrap;
 }
 
 .nav-links {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: flex-end;
-    gap: 22px;
+  display: flex;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+  gap: 10px 22px;
 }
 
 .nav-links a {
-    font-family: Arial, sans-serif;
-    font-size: 15px;
-    text-decoration: none;
-    transition: color 0.2s;
+  font-size: 15px;
+  text-decoration: none;
 }
 
 .nav-links a:hover,
 .nav-links a[aria-current="page"] {
-    color: #865B5B;
+  color: var(--deep-rose);
 }
 
 .nav-links a[aria-current="page"] {
-    border-bottom: 1px solid var(--rose);
+  border-bottom: 1px solid var(--rose);
 }
 
-/* =====================================
-   DECORATIVE ELEMENTS
-   ===================================== */
-
+/* Decorative typography */
 .eyebrow {
-    font-family: Arial, sans-serif;
-    font-size: 12px;
-    font-weight: bold;
-    letter-spacing: 3px;
-    color: #936A6A;
-    text-transform: uppercase;
+  font-size: 11px;
+  font-weight: bold;
+  letter-spacing: 0.22em;
+  color: var(--deep-rose);
+  text-transform: uppercase;
 }
 
-.heading-line {
-    width: 85px;
-    height: 2px;
-    background: var(--rose);
-    margin: 20px auto 0;
-    border-radius: 5px;
+.fine-divider {
+  color: var(--rose);
+  font-size: 25px;
 }
 
-.ornament {
-    color: var(--rose);
-    font-size: 25px;
-    margin: 18px 0;
+/* Homepage hero */
+.hero,
+.page-hero {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  text-align: center;
+  background-color: var(--cream);
 }
-
-.botanical-section {
-    position: relative;
-    isolation: isolate;
-    overflow: hidden;
-    background-color: var(--cream);
-}
-
-/* Decorative flowing rose curves */
-.botanical-section::before {
-    content: "";
-    position: absolute;
-    width: 440px;
-    height: 440px;
-    left: -250px;
-    top: -250px;
-    border-radius: 44%;
-    background: var(--blush);
-    transform: rotate(-25deg);
-    z-index: -1;
-}
-
-.botanical-section::after {
-    content: "";
-    position: absolute;
-    width: 480px;
-    height: 300px;
-    right: -190px;
-    bottom: -210px;
-    border-radius: 50%;
-    background: var(--blush);
-    transform: rotate(-20deg);
-    z-index: -1;
-}
-
-/* =====================================
-   HOMEPAGE HERO
-   ===================================== */
 
 .hero {
-    min-height: 530px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 90px 10%;
-    text-align: center;
+  min-height: 570px;
+  display: grid;
+  place-items: center;
+  padding: 95px 7% 155px;
 }
 
-.hero-text {
-    max-width: 700px;
-    margin: auto;
+.hero-inner {
+  max-width: 760px;
+  position: relative;
+  z-index: 1;
 }
 
-.hero h1 {
-    font-family: "Brush Script MT",
-                 "Segoe Script",
-                 Georgia, serif;
-    font-size: clamp(54px, 8vw, 90px);
-    margin: 10px 0;
-    font-weight: normal;
+.script-title {
+  font-family: "Great Vibes", Georgia, serif;
+  font-size: clamp(72px, 11vw, 124px);
+  margin: 12px 0 0;
+  line-height: 1.2;
 }
 
-.hero h2 {
-    font-family: Georgia, serif;
-    font-size: clamp(19px, 3vw, 26px);
-    color: #865B5B;
-    margin: 10px 0 15px;
+.hero-subtitle {
+  font-family: Georgia, serif;
+  color: var(--deep-rose);
+  font-size: clamp(18px, 2.7vw, 25px);
+  margin: 0 0 15px;
 }
 
-.hero-text > p:not(.eyebrow) {
-    max-width: 580px;
-    margin: 15px auto;
-    font-size: 17px;
+.hero-inner > p:not(.eyebrow):not(.hero-subtitle) {
+  max-width: 610px;
+  margin: 14px auto;
 }
 
-/* =====================================
-   PAGE INTRODUCTIONS
-   ===================================== */
-
-.page-intro {
-    text-align: center;
-    padding: 100px 10%;
-    min-height: 300px;
+/* Flowing rose wave artwork */
+.decorated::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -1px;
+  height: clamp(110px, 19vw, 220px);
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1600 360' preserveAspectRatio='none'%3E%3Cpath fill='%23E8D8D4' d='M0 70 C230 200 370 12 590 115 S1060 290 1290 120 S1510 50 1600 85 V360 H0 Z'/%3E%3Cpath fill='%23D6B3B0' fill-opacity='.52' d='M0 165 C260 280 470 85 690 190 S1140 315 1370 190 S1530 155 1600 170 V360 H0 Z'/%3E%3Cpath fill='none' stroke='%23B98787' stroke-width='2' d='M0 70 C230 200 370 12 590 115 S1060 290 1290 120 S1510 50 1600 85'/%3E%3C/svg%3E");
+  background-position: center bottom;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  pointer-events: none;
+  z-index: -1;
 }
 
-.page-intro h1 {
-    font-family: "Brush Script MT",
-                 "Segoe Script",
-                 Georgia, serif;
-    font-size: clamp(48px, 7vw, 72px);
-    margin: 10px 0;
+/* Botanical line illustration */
+.decorated::before,
+.floral-side::before {
+  content: "";
+  position: absolute;
+  width: 210px;
+  height: 285px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 260 340' fill='none' stroke='%238F6C69' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M40 320 C80 230 112 156 152 28 M40 320 C111 283 165 261 235 248'/%3E%3Cpath d='M67 258 C35 248 24 225 21 197 C50 200 68 222 67 258 Z M87 213 C121 206 144 182 150 154 C118 161 98 182 87 213 Z M112 157 C76 143 65 118 67 91 C94 105 109 127 112 157 Z M137 84 C165 76 185 56 190 29 C163 35 145 54 137 84 Z M100 290 C87 267 89 247 101 227 C116 248 116 269 100 290 Z M156 270 C164 243 182 228 209 224 C200 250 181 265 156 270 Z'/%3E%3Cpath d='M154 27 C144 13 145 6 154 3 C167 5 170 16 154 27 Z M154 27 C171 16 183 19 184 30 C177 43 164 40 154 27 Z M154 27 C152 44 141 52 132 46 C126 33 136 26 154 27 Z'/%3E%3C/svg%3E");
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  pointer-events: none;
+  z-index: -1;
 }
 
-.page-intro > p:not(.eyebrow) {
-    max-width: 650px;
-    margin: 25px auto 0;
-    font-size: 17px;
+.decorated::before {
+  right: 3%;
+  top: 12%;
+  opacity: 0.55;
 }
 
-/* =====================================
-   CONTENT SECTIONS
-   ===================================== */
-
-.section {
-    padding: 75px 8%;
+/* Secondary page headers */
+.page-hero {
+  padding: 75px 8% 155px;
+  min-height: 345px;
 }
 
-.cream-section {
-    background-color: var(--cream);
+.page-hero h1 {
+  font-family: "Great Vibes", Georgia, serif;
+  font-size: clamp(56px, 8vw, 88px);
+  margin: 8px 0;
 }
 
-.blush-section {
-    background-color: var(--blush);
+.page-hero > p:last-child {
+  max-width: 680px;
+  margin: 0 auto;
 }
 
-.section-heading {
-    text-align: center;
-    margin-bottom: 45px;
+/* About page variation */
+.page-about .page-hero {
+  background: var(--paper);
 }
 
-.section-heading h2 {
-    font-size: clamp(30px, 4vw, 43px);
-    margin: 10px 0;
+.page-about .page-hero::before {
+  right: auto;
+  left: 4%;
+  transform: scaleX(-1);
 }
 
-.narrow-content {
-    max-width: 750px;
-    margin: auto;
-    text-align: center;
+.page-about .page-hero::after {
+  transform: scaleX(-1);
 }
 
-.narrow-content h2 {
-    font-size: 36px;
+/* Experience page variation */
+.page-experience .page-hero {
+  background: var(--blush);
 }
 
-.narrow-content p {
-    font-size: 16px;
-    line-height: 1.9;
-    margin: 20px 0;
+.page-experience .page-hero::before {
+  right: 7%;
+  transform: rotate(12deg);
 }
 
-/* =====================================
-   PROJECT & EXPERIENCE CARDS
-   ===================================== */
+.page-experience .page-hero::after {
+  opacity: 0.65;
+}
 
+/* Projects page variation */
+.page-projects .page-hero {
+  background: var(--cream);
+}
+
+.page-projects .page-hero::before {
+  right: auto;
+  left: 5%;
+  transform: scaleX(-1);
+  opacity: 0.32;
+}
+
+.page-projects .page-hero::after {
+  height: 130px;
+  opacity: 0.6;
+}
+
+/* Contact page variation */
+.page-contact .page-hero {
+  background: var(--paper);
+}
+
+.page-contact .page-hero::before {
+  right: 7%;
+  opacity: 0.65;
+}
+
+/* Content sections */
+.content-section {
+  padding: 70px 7%;
+  position: relative;
+}
+
+.section-cream {
+  background: var(--cream);
+}
+
+.section-blush {
+  background: var(--blush);
+}
+
+.section-title {
+  text-align: center;
+  margin-bottom: 35px;
+}
+
+.section-title h2 {
+  font-size: clamp(30px, 4vw, 43px);
+  margin: 8px 0;
+}
+
+.section-title::after {
+  content: "";
+  display: block;
+  width: 78px;
+  height: 1px;
+  background: var(--rose);
+  margin: 18px auto 0;
+}
+
+.reading-width {
+  max-width: 740px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.reading-width p {
+  margin: 18px auto;
+}
+
+/* Project and experience cards */
 .card-grid {
-    max-width: 1150px;
-    margin: auto;
-    display: grid;
-    gap: 24px;
+  max-width: 1150px;
+  margin: 0 auto;
+  display: grid;
+  gap: 22px;
 }
 
-.two-columns {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+.two-col {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
 }
 
-.three-columns {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
+.three-col {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
 }
 
-.single-column {
-    grid-template-columns: 1fr;
-    max-width: 750px;
+.one-col {
+  grid-template-columns: 1fr;
+  max-width: 750px;
 }
 
 .info-card {
-    background: var(--white);
-    border: 1px solid rgba(185, 135, 135, 0.5);
-    border-radius: 18px;
-    padding: 32px;
-    min-width: 0;
-    box-shadow: 0 6px 20px rgba(64, 54, 51, 0.04);
-    transition: transform 0.2s ease,
-                box-shadow 0.2s ease;
-}
-
-.info-card:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 10px 25px rgba(64, 54, 51, 0.08);
+  min-width: 0;
+  padding: 29px;
+  border: 1px solid #d9bdb9;
+  border-radius: 13px;
+  background: var(--paper);
+  box-shadow: 0 4px 18px rgba(64, 54, 51, 0.04);
 }
 
 .info-card h3 {
-    font-size: 24px;
-    margin: 10px 0 15px;
+  font-size: 23px;
+  margin: 5px 0 12px;
 }
 
 .info-card p {
-    font-size: 15px;
-    line-height: 1.8;
+  font-size: 15px;
 }
 
 .card-label {
-    font-size: 11px !important;
-    letter-spacing: 1.5px;
-    color: #865B5B;
-    font-weight: bold;
+  font-size: 11px !important;
+  font-weight: bold;
+  letter-spacing: 0.08em;
+  color: var(--deep-rose);
 }
 
 .organization {
-    color: #865B5B;
-    font-weight: bold;
+  font-weight: bold;
+  color: var(--deep-rose);
 }
 
 .tag {
-    display: inline-block;
-    background: var(--blush);
-    color: var(--espresso);
-    border-radius: 20px;
-    padding: 6px 15px;
-    margin-top: 12px;
-    font-size: 12px;
-    letter-spacing: 0.5px;
+  display: inline-block;
+  background: var(--blush);
+  padding: 5px 13px;
+  border-radius: 20px;
+  font-size: 12px;
+  margin-top: 8px;
 }
 
-/* =====================================
-   LINKS
-   ===================================== */
-
-.text-link {
-    display: inline-block;
-    color: #865B5B;
-    font-weight: bold;
-    font-size: 15px;
-    text-decoration: none;
-    border-bottom: 1px solid var(--rose);
-    padding-bottom: 4px;
-    margin-top: 15px;
+/* Text links */
+.quiet-link {
+  display: inline-block;
+  color: var(--deep-rose);
+  font-size: 15px;
+  font-weight: bold;
+  text-decoration: none;
+  border-bottom: 1px solid var(--rose);
+  padding-bottom: 3px;
+  margin-top: 12px;
 }
 
-.text-link:hover {
-    color: var(--espresso);
+.quiet-link:hover {
+  text-decoration: underline;
 }
 
-.center-link {
-    text-align: center;
-    margin-top: 35px;
+.centered-action {
+  text-align: center;
+  margin-top: 28px;
 }
 
-/* =====================================
-   CONTACT
-   ===================================== */
-
-.contact-preview {
-    text-align: center;
-    padding: 80px 10%;
+/* Botanical details on content sections */
+.floral-side {
+  isolation: isolate;
+  overflow: hidden;
 }
 
-.contact-preview p {
-    max-width: 650px;
-    margin: 0 auto 15px;
+.floral-side::before {
+  left: 1%;
+  top: 12%;
+  width: 160px;
+  height: 270px;
+  opacity: 0.19;
 }
 
-.contact-details {
-    max-width: 700px;
-    margin: auto;
-    background: var(--white);
-    border: 1px solid rgba(185, 135, 135, 0.5);
-    border-radius: 18px;
-    padding: 30px 40px;
-    text-align: center;
+.page-about .floral-side::before {
+  left: auto;
+  right: 2%;
+  transform: scaleX(-1);
+}
+
+/* Homepage closing section */
+.closing-section {
+  text-align: center;
+  padding: 90px 7% 150px;
+  background: var(--cream);
+}
+
+.closing-section > p {
+  max-width: 620px;
+  margin: 0 auto;
+}
+
+.closing-section::before {
+  right: auto;
+  left: 4%;
+  transform: scaleX(-1);
+}
+
+/* Contact information */
+.contact-panel {
+  max-width: 680px;
+  margin: 0 auto;
+  padding: 25px 38px;
+  border: 1px solid #d9bdb9;
+  background: var(--paper);
+  border-radius: 13px;
+  text-align: center;
 }
 
 .contact-item {
-    padding: 22px 0;
+  padding: 18px 0;
 }
 
 .contact-item + .contact-item {
-    border-top: 1px solid var(--blush);
+  border-top: 1px solid var(--blush);
 }
 
 .contact-item h3 {
-    font-size: 24px;
-    margin: 0 0 8px;
+  font-size: 23px;
+  margin: 0 0 4px;
 }
 
 .contact-item a {
-    color: #865B5B;
-    text-decoration: none;
-    overflow-wrap: anywhere;
+  color: var(--deep-rose);
+  text-decoration: none;
+  overflow-wrap: anywhere;
 }
 
 .contact-item a:hover {
-    text-decoration: underline;
+  text-decoration: underline;
 }
 
-/* =====================================
-   FOOTER
-   ===================================== */
-
-footer {
-    background: var(--blush);
-    padding: 28px 15px;
-    text-align: center;
-    border-top: 1px solid rgba(64, 54, 51, 0.1);
-    font-size: 13px;
+/* Footer */
+.site-footer {
+  background: var(--blush);
+  border-top: 1px solid #d9bdb9;
+  padding: 24px 12px;
+  text-align: center;
+  font-size: 13px;
 }
 
-footer p {
-    margin: 5px 0;
+.site-footer p {
+  margin: 4px 0;
 }
 
-footer a {
-    text-decoration: none;
-    margin: 0 8px;
+.site-footer a {
+  text-decoration: none;
 }
 
-footer a:hover {
-    color: #865B5B;
+.site-footer a:hover {
+  text-decoration: underline;
 }
 
-footer span {
-    color: var(--rose);
-}
-
-/* =====================================
-   TABLET & MOBILE
-   ===================================== */
-
+/* Mobile layout */
 @media screen and (max-width: 768px) {
+  .site-header {
+    padding: 15px 12px;
+  }
 
-    header {
-        padding: 18px 14px;
-    }
+  .site-nav {
+    flex-direction: column;
+    gap: 10px;
+  }
 
-    .site-nav {
-        flex-direction: column;
-        gap: 15px;
-    }
+  .site-name {
+    font-size: 35px;
+  }
 
-    .site-name {
-        font-size: 32px;
-    }
+  .nav-links {
+    width: 100%;
+    justify-content: center;
+    gap: 8px 16px;
+  }
 
-    .nav-links {
-        justify-content: center;
-        gap: 12px 18px;
-        width: 100%;
-    }
+  .nav-links a {
+    font-size: 14px;
+  }
 
-    .nav-links a {
-        font-size: 15px;
-    }
+  .hero {
+    min-height: 0;
+    padding: 80px 7% 140px;
+  }
 
-    .hero {
-        min-height: 0;
-        padding: 85px 7%;
-    }
+  .page-hero {
+    min-height: 0;
+    padding: 70px 7% 130px;
+  }
 
-    .page-intro {
-        min-height: 0;
-        padding: 80px 7%;
-    }
+  .content-section {
+    padding: 55px 6%;
+  }
 
-    .section {
-        padding: 55px 6%;
-    }
+  .two-col,
+  .three-col {
+    grid-template-columns: 1fr;
+  }
 
-    .two-columns,
-    .three-columns {
-        grid-template-columns: 1fr;
-    }
+  .info-card {
+    padding: 24px;
+  }
 
-    .info-card {
-        padding: 25px;
-    }
+  .decorated::before {
+    width: 110px;
+    height: 170px;
+    right: -25px;
+    top: 6%;
+    opacity: 0.22;
+  }
 
-    .contact-preview {
-        padding: 65px 7%;
-    }
+  .page-about .page-hero::before,
+  .page-projects .page-hero::before {
+    left: -25px;
+    right: auto;
+  }
 
-    .contact-details {
-        padding: 20px;
-    }
+  .decorated::after {
+    height: 110px;
+  }
 
-    .botanical-section::before {
-        width: 280px;
-        height: 280px;
-        left: -180px;
-        top: -170px;
-    }
+  .floral-side::before {
+    width: 100px;
+    height: 180px;
+    opacity: 0.11;
+  }
 
-    .botanical-section::after {
-        width: 300px;
-        height: 200px;
-        right: -170px;
-        bottom: -140px;
-    }
+  .closing-section {
+    padding: 65px 6% 130px;
+  }
+
+  .contact-panel {
+    padding: 18px;
+  }
 }
 
+/* Small phones */
 @media screen and (max-width: 360px) {
+  .nav-links {
+    gap: 7px 12px;
+  }
 
-    .nav-links {
-        gap: 10px 13px;
-    }
+  .nav-links a {
+    font-size: 13px;
+  }
 
-    .nav-links a {
-        font-size: 14px;
-    }
-
-    .hero h1 {
-        font-size: 52px;
-    }
+  .site-name {
+    font-size: 32px;
+  }
 }
 
+/* Accessibility */
 @media (prefers-reduced-motion: reduce) {
-    html {
-        scroll-behavior: auto;
-    }
-
-    .info-card {
-        transition: none;
-    }
+  html {
+    scroll-behavior: auto;
+  }
 }
