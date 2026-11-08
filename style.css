@@ -1,36 +1,79 @@
+
+/* Career Portfolio Colors */
+:root {
+    --cream: #FAF7F2;
+    --blush: #E8D8D4;
+    --rose: #B98787;
+    --espresso: #403633;
+}
+
+/* General Styling */
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
 body {
-    background-color: #FAF7F2;
-    color: #403633;
-    font-family: Arial, sans-serif;
     margin: 0;
+    background-color: var(--cream);
+    color: var(--espresso);
+    font-family: Arial, sans-serif;
+    overflow-wrap: break-word;
 }
 
+a {
+    color: inherit;
+}
+
+/* Header and Navigation */
 header {
-    background-color: #E8D8D4;
-    padding: 20px;
+    background-color: var(--blush);
+    padding: 18px 5%;
 }
 
-nav {
+.site-nav {
+    max-width: 1200px;
+    margin: auto;
     display: flex;
-    justify-content: space-between;
     align-items: center;
+    justify-content: space-between;
+    gap: 24px;
 }
 
-nav a {
-    color: #403633;
+.site-name {
+    font-size: 24px;
+    font-weight: bold;
     text-decoration: none;
-    margin: 10px;
+    white-space: nowrap;
 }
 
-nav a:hover {
-    color: #B98787;
+.nav-links {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 22px;
 }
+
+.nav-links a {
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.nav-links a:hover {
+    color: var(--rose);
+}
+
+/* Homepage Hero */
 .hero {
     display: flex;
     align-items: center;
     min-height: 500px;
     padding: 60px 10%;
-    background-color: #FAF7F2;
+    background-color: var(--cream);
 }
 
 .hero-text {
@@ -39,16 +82,15 @@ nav a:hover {
 
 .hero-text h1 {
     font-family: Georgia, serif;
-    font-size: 70px;
+    font-size: clamp(42px, 6vw, 70px);
     font-weight: normal;
-    color: #403633;
     margin: 15px 0;
 }
 
 .hero-text h2 {
     font-size: 22px;
     font-weight: normal;
-    color: #B98787;
+    color: var(--rose);
 }
 
 .hero-text p {
@@ -56,9 +98,11 @@ nav a:hover {
     line-height: 1.8;
 }
 
-.hero-text a {
+/* Buttons */
+.hero-text a,
+.contact a.btn {
     display: inline-block;
-    background-color: #B98787;
+    background-color: var(--rose);
     color: white;
     padding: 12px 25px;
     margin-top: 20px;
@@ -66,20 +110,29 @@ nav a:hover {
     border-radius: 25px;
 }
 
-.hero-text a:hover {
-    background-color: #403633;
+.hero-text a:hover,
+.contact a.btn:hover {
+    background-color: var(--espresso);
 }
+
+/* About Sections */
 .about {
-    background-color: #E8D8D4;
+    background-color: var(--blush);
     padding: 60px 10%;
     text-align: center;
 }
 
-.about h2 {
+.about h1 {
+    font-size: clamp(32px, 5vw, 48px);
+}
+
+.about h2,
+.skills h2,
+.projects h2,
+.contact h2 {
     font-family: Georgia, serif;
-    font-size: 40px;
+    font-size: clamp(32px, 4vw, 40px);
     font-weight: normal;
-    color: #403633;
 }
 
 .about p {
@@ -88,52 +141,52 @@ nav a:hover {
     max-width: 700px;
     margin: 20px auto;
 }
+
+/* Skills and Experience */
 .skills {
-    background-color: #FAF7F2;
+    background-color: var(--cream);
     padding: 60px 10%;
     text-align: center;
 }
 
 .skills h2 {
-    font-family: Georgia, serif;
-    font-size: 40px;
-    font-weight: normal;
     margin-bottom: 40px;
 }
 
 .skills-container {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 20px;
+    max-width: 1100px;
+    margin: auto;
 }
 
 .skill-card {
-    background-color: #E8D8D4;
+    background-color: var(--blush);
     padding: 30px;
     border-radius: 15px;
+    min-width: 0;
 }
 
 .skill-card h3 {
     font-family: Georgia, serif;
     font-size: 25px;
     font-weight: normal;
-    color: #403633;
 }
 
 .skill-card p {
     font-size: 16px;
     line-height: 1.6;
 }
+
+/* Homepage Featured Projects */
 .projects {
-    background-color: #E8D8D4;
+    background-color: var(--blush);
     padding: 60px 10%;
     text-align: center;
 }
 
 .projects h2 {
-    font-family: Georgia, serif;
-    font-size: 40px;
-    font-weight: normal;
     margin-bottom: 15px;
 }
 
@@ -144,15 +197,18 @@ nav a:hover {
 
 .projects-container {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: 20px;
+    max-width: 1100px;
+    margin: auto;
 }
 
 .project-card {
-    background-color: #FAF7F2;
+    background-color: var(--cream);
     padding: 30px;
     border-radius: 15px;
     text-align: left;
+    min-width: 0;
 }
 
 .project-card h3 {
@@ -168,263 +224,106 @@ nav a:hover {
 
 .project-card span {
     display: inline-block;
-    background-color: #E8D8D4;
+    background-color: var(--blush);
     padding: 8px 15px;
     border-radius: 20px;
     font-size: 13px;
     margin-top: 15px;
 }
+
+/* Contact Section */
 .contact {
-    background-color: #FAF7F2;
+    background-color: var(--cream);
     padding: 70px 10%;
     text-align: center;
-}
-
-.contact h2 {
-    font-family: Georgia, serif;
-    font-size: 40px;
-    font-weight: normal;
-    color: #403633;
 }
 
 .contact p {
     font-size: 16px;
     line-height: 1.8;
     margin-bottom: 30px;
+    overflow-wrap: anywhere;
 }
 
 .contact a.btn {
-    display: inline-block;
-    background-color: #B98787;
-    color: white;
-    padding: 12px 30px;
-    text-decoration: none;
-    border-radius: 25px;
+    margin-top: 0;
 }
 
-.contact a.btn:hover {
-    background-color: #403633;
-}
-
+/* Footer */
 footer {
-    background-color: #E8D8D4;
+    background-color: var(--blush);
     text-align: center;
     padding: 20px;
     font-size: 14px;
+    line-height: 1.7;
 }
 
 footer a {
-    color: #403633;
     text-decoration: none;
-    margin: 0 10px;
+    margin: 0 5px;
 }
 
 footer a:hover {
-    color: #B98787;
+    color: var(--rose);
 }
 
-/* Mobile Navigation */
+/* Mobile Styling */
 @media screen and (max-width: 768px) {
 
     header {
-        padding: 15px;
+        padding: 18px 14px;
     }
 
-    nav {
+    .site-nav {
         flex-direction: column;
-        gap: 15px;
+        gap: 18px;
     }
 
-    .nav-links {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 10px;
-        padding: 0;
-        margin: 0;
-        list-style: none;
-    }
-
-    nav a {
-        margin: 5px;
-        font-size: 14px;
-    }
-
-    .logo {
-        text-align: center;
-    }
-
-}
-
-/* Navigation Fix */
-nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 20px;
-}
-
-.nav-links {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 15px;
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-
-.logo {
-    font-size: 24px;
-    font-weight: bold;
-}
-
-/* Mobile Layout */
-@media screen and (max-width: 768px) {
-
-    nav {
-        flex-direction: column;
-        justify-content: center;
-        text-align: center;
-        gap: 10px;
-    }
-
-    nav h2 {
-        margin: 0;
-    }
-
-    nav a {
-        display: inline-block;
-        margin: 5px;
+    .site-name {
+        font-size: 26px;
     }
 
     .nav-links {
         justify-content: center;
-        gap: 5px;
-    }
-
-    .skills-container,
-    .projects-container {
-        grid-template-columns: 1fr;
-    }
-
-    .hero {
-        flex-direction: column;
-        padding: 40px 5%;
-    }
-
-    .hero-text h1 {
-        font-size: 42px;
-    }
-}
-
-/* Mobile Layout Fix */
-@media screen and (max-width: 768px) {
-
-    header nav {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        gap: 10px;
+        gap: 12px 18px;
         width: 100%;
-        box-sizing: border-box;
     }
 
-    header nav a {
-        margin: 4px;
-        font-size: 14px;
-    }
-
-    .nav-links {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        align-items: center;
-        gap: 8px;
-        padding: 0;
-        margin: 0;
-        list-style: none;
-        max-width: 100%;
-    }
-
-    .skills-container,
-    .projects-container {
-        grid-template-columns: 1fr;
+    .nav-links a {
+        font-size: 15px;
     }
 
     .hero {
-        flex-direction: column;
-        padding: 40px 5%;
+        min-height: 0;
+        padding: 55px 7%;
     }
 
-    .hero-text h1 {
-        font-size: 42px;
-    }
-
+    .about,
+    .skills,
+    .projects,
     .contact {
-        padding: 40px 5%;
+        padding: 48px 6%;
     }
 
-    .contact p {
-        overflow-wrap: anywhere;
-    }
-}
-
-/* Navigation Spacing Fix */
-header nav {
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    gap: 30px;
-}
-
-header nav h2 {
-    margin-right: auto;
-}
-
-header nav a {
-    margin: 0;
-}
-
-/* Mobile Navigation */
-@media screen and (max-width: 768px) {
-
-    header nav {
-        flex-direction: column;
-        justify-content: center;
-        gap: 12px;
+    .skills-container,
+    .projects-container {
+        grid-template-columns: 1fr;
     }
 
-    header nav h2 {
-        margin: 0;
-    }
-
-    header nav a {
-        margin: 0;
+    .skill-card,
+    .project-card {
+        padding: 24px;
     }
 }
 
-/* Consistent Mobile Navigation */
-@media screen and (max-width: 768px) {
+/* Smaller Phones */
+@media screen and (max-width: 360px) {
 
-    header nav {
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: center;
-        align-items: center;
-        gap: 12px;
+    .nav-links {
+        gap: 10px 13px;
     }
 
-    header nav h2 {
-        width: 100%;
-        text-align: center;
-        margin: 0 0 10px;
-    }
-
-    header nav a {
-        margin: 0;
+    .nav-links a {
         font-size: 14px;
     }
 }
-
