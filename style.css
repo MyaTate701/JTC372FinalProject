@@ -1,10 +1,15 @@
 
-/* Career Portfolio Colors */
+/* =====================================
+   MYA TATE | CAREER PORTFOLIO
+   ===================================== */
+
+/* Website Colors */
 :root {
     --cream: #FAF7F2;
     --blush: #E8D8D4;
     --rose: #B98787;
     --espresso: #403633;
+    --white: #FFFEFC;
 }
 
 /* General Styling */
@@ -18,20 +23,36 @@ html {
 
 body {
     margin: 0;
-    background-color: var(--cream);
+    background: var(--cream);
     color: var(--espresso);
     font-family: Arial, sans-serif;
+    line-height: 1.7;
     overflow-wrap: break-word;
+}
+
+h1, h2, h3 {
+    font-family: Georgia, serif;
+    font-weight: normal;
+    line-height: 1.3;
 }
 
 a {
     color: inherit;
 }
 
-/* Header and Navigation */
+a:focus-visible {
+    outline: 2px solid var(--rose);
+    outline-offset: 4px;
+}
+
+/* =====================================
+   HEADER & NAVIGATION
+   ===================================== */
+
 header {
-    background-color: var(--blush);
+    background: var(--blush);
     padding: 18px 5%;
+    border-bottom: 1px solid rgba(64, 54, 51, 0.1);
 }
 
 .site-nav {
@@ -44,10 +65,14 @@ header {
 }
 
 .site-name {
-    font-size: 24px;
-    font-weight: bold;
+    font-family: "Brush Script MT",
+                 "Segoe Script",
+                 Georgia, serif;
+    font-size: 32px;
+    font-weight: normal;
     text-decoration: none;
     white-space: nowrap;
+    line-height: 1.3;
 }
 
 .nav-links {
@@ -59,215 +84,365 @@ header {
 }
 
 .nav-links a {
+    font-family: Arial, sans-serif;
+    font-size: 15px;
     text-decoration: none;
-    font-size: 16px;
+    transition: color 0.2s;
 }
 
-.nav-links a:hover {
+.nav-links a:hover,
+.nav-links a[aria-current="page"] {
+    color: #865B5B;
+}
+
+.nav-links a[aria-current="page"] {
+    border-bottom: 1px solid var(--rose);
+}
+
+/* =====================================
+   DECORATIVE ELEMENTS
+   ===================================== */
+
+.eyebrow {
+    font-family: Arial, sans-serif;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 3px;
+    color: #936A6A;
+    text-transform: uppercase;
+}
+
+.heading-line {
+    width: 85px;
+    height: 2px;
+    background: var(--rose);
+    margin: 20px auto 0;
+    border-radius: 5px;
+}
+
+.ornament {
     color: var(--rose);
+    font-size: 25px;
+    margin: 18px 0;
 }
 
-/* Homepage Hero */
+.botanical-section {
+    position: relative;
+    isolation: isolate;
+    overflow: hidden;
+    background-color: var(--cream);
+}
+
+/* Decorative flowing rose curves */
+.botanical-section::before {
+    content: "";
+    position: absolute;
+    width: 440px;
+    height: 440px;
+    left: -250px;
+    top: -250px;
+    border-radius: 44%;
+    background: var(--blush);
+    transform: rotate(-25deg);
+    z-index: -1;
+}
+
+.botanical-section::after {
+    content: "";
+    position: absolute;
+    width: 480px;
+    height: 300px;
+    right: -190px;
+    bottom: -210px;
+    border-radius: 50%;
+    background: var(--blush);
+    transform: rotate(-20deg);
+    z-index: -1;
+}
+
+/* =====================================
+   HOMEPAGE HERO
+   ===================================== */
+
 .hero {
+    min-height: 530px;
     display: flex;
     align-items: center;
-    min-height: 500px;
-    padding: 60px 10%;
-    background-color: var(--cream);
+    justify-content: center;
+    padding: 90px 10%;
+    text-align: center;
 }
 
 .hero-text {
-    max-width: 600px;
-}
-
-.hero-text h1 {
-    font-family: Georgia, serif;
-    font-size: clamp(42px, 6vw, 70px);
-    font-weight: normal;
-    margin: 15px 0;
-}
-
-.hero-text h2 {
-    font-size: 22px;
-    font-weight: normal;
-    color: var(--rose);
-}
-
-.hero-text p {
-    font-size: 16px;
-    line-height: 1.8;
-}
-
-/* Buttons */
-.hero-text a,
-.contact a.btn {
-    display: inline-block;
-    background-color: var(--rose);
-    color: white;
-    padding: 12px 25px;
-    margin-top: 20px;
-    text-decoration: none;
-    border-radius: 25px;
-}
-
-.hero-text a:hover,
-.contact a.btn:hover {
-    background-color: var(--espresso);
-}
-
-/* About Sections */
-.about {
-    background-color: var(--blush);
-    padding: 60px 10%;
-    text-align: center;
-}
-
-.about h1 {
-    font-size: clamp(32px, 5vw, 48px);
-}
-
-.about h2,
-.skills h2,
-.projects h2,
-.contact h2 {
-    font-family: Georgia, serif;
-    font-size: clamp(32px, 4vw, 40px);
-    font-weight: normal;
-}
-
-.about p {
-    font-size: 16px;
-    line-height: 1.8;
     max-width: 700px;
-    margin: 20px auto;
+    margin: auto;
 }
 
-/* Skills and Experience */
-.skills {
+.hero h1 {
+    font-family: "Brush Script MT",
+                 "Segoe Script",
+                 Georgia, serif;
+    font-size: clamp(54px, 8vw, 90px);
+    margin: 10px 0;
+    font-weight: normal;
+}
+
+.hero h2 {
+    font-family: Georgia, serif;
+    font-size: clamp(19px, 3vw, 26px);
+    color: #865B5B;
+    margin: 10px 0 15px;
+}
+
+.hero-text > p:not(.eyebrow) {
+    max-width: 580px;
+    margin: 15px auto;
+    font-size: 17px;
+}
+
+/* =====================================
+   PAGE INTRODUCTIONS
+   ===================================== */
+
+.page-intro {
+    text-align: center;
+    padding: 100px 10%;
+    min-height: 300px;
+}
+
+.page-intro h1 {
+    font-family: "Brush Script MT",
+                 "Segoe Script",
+                 Georgia, serif;
+    font-size: clamp(48px, 7vw, 72px);
+    margin: 10px 0;
+}
+
+.page-intro > p:not(.eyebrow) {
+    max-width: 650px;
+    margin: 25px auto 0;
+    font-size: 17px;
+}
+
+/* =====================================
+   CONTENT SECTIONS
+   ===================================== */
+
+.section {
+    padding: 75px 8%;
+}
+
+.cream-section {
     background-color: var(--cream);
-    padding: 60px 10%;
+}
+
+.blush-section {
+    background-color: var(--blush);
+}
+
+.section-heading {
+    text-align: center;
+    margin-bottom: 45px;
+}
+
+.section-heading h2 {
+    font-size: clamp(30px, 4vw, 43px);
+    margin: 10px 0;
+}
+
+.narrow-content {
+    max-width: 750px;
+    margin: auto;
     text-align: center;
 }
 
-.skills h2 {
-    margin-bottom: 40px;
+.narrow-content h2 {
+    font-size: 36px;
 }
 
-.skills-container {
+.narrow-content p {
+    font-size: 16px;
+    line-height: 1.9;
+    margin: 20px 0;
+}
+
+/* =====================================
+   PROJECT & EXPERIENCE CARDS
+   ===================================== */
+
+.card-grid {
+    max-width: 1150px;
+    margin: auto;
     display: grid;
+    gap: 24px;
+}
+
+.two-columns {
     grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 20px;
-    max-width: 1100px;
-    margin: auto;
 }
 
-.skill-card {
-    background-color: var(--blush);
-    padding: 30px;
-    border-radius: 15px;
-    min-width: 0;
-}
-
-.skill-card h3 {
-    font-family: Georgia, serif;
-    font-size: 25px;
-    font-weight: normal;
-}
-
-.skill-card p {
-    font-size: 16px;
-    line-height: 1.6;
-}
-
-/* Homepage Featured Projects */
-.projects {
-    background-color: var(--blush);
-    padding: 60px 10%;
-    text-align: center;
-}
-
-.projects h2 {
-    margin-bottom: 15px;
-}
-
-.projects-intro {
-    font-size: 16px;
-    margin-bottom: 40px;
-}
-
-.projects-container {
-    display: grid;
+.three-columns {
     grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: 20px;
-    max-width: 1100px;
-    margin: auto;
 }
 
-.project-card {
-    background-color: var(--cream);
-    padding: 30px;
-    border-radius: 15px;
-    text-align: left;
+.single-column {
+    grid-template-columns: 1fr;
+    max-width: 750px;
+}
+
+.info-card {
+    background: var(--white);
+    border: 1px solid rgba(185, 135, 135, 0.5);
+    border-radius: 18px;
+    padding: 32px;
     min-width: 0;
+    box-shadow: 0 6px 20px rgba(64, 54, 51, 0.04);
+    transition: transform 0.2s ease,
+                box-shadow 0.2s ease;
 }
 
-.project-card h3 {
-    font-family: Georgia, serif;
+.info-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(64, 54, 51, 0.08);
+}
+
+.info-card h3 {
     font-size: 24px;
-    font-weight: normal;
+    margin: 10px 0 15px;
 }
 
-.project-card p {
+.info-card p {
     font-size: 15px;
-    line-height: 1.7;
+    line-height: 1.8;
 }
 
-.project-card span {
+.card-label {
+    font-size: 11px !important;
+    letter-spacing: 1.5px;
+    color: #865B5B;
+    font-weight: bold;
+}
+
+.organization {
+    color: #865B5B;
+    font-weight: bold;
+}
+
+.tag {
     display: inline-block;
-    background-color: var(--blush);
-    padding: 8px 15px;
+    background: var(--blush);
+    color: var(--espresso);
     border-radius: 20px;
-    font-size: 13px;
+    padding: 6px 15px;
+    margin-top: 12px;
+    font-size: 12px;
+    letter-spacing: 0.5px;
+}
+
+/* =====================================
+   LINKS
+   ===================================== */
+
+.text-link {
+    display: inline-block;
+    color: #865B5B;
+    font-weight: bold;
+    font-size: 15px;
+    text-decoration: none;
+    border-bottom: 1px solid var(--rose);
+    padding-bottom: 4px;
     margin-top: 15px;
 }
 
-/* Contact Section */
-.contact {
-    background-color: var(--cream);
-    padding: 70px 10%;
+.text-link:hover {
+    color: var(--espresso);
+}
+
+.center-link {
+    text-align: center;
+    margin-top: 35px;
+}
+
+/* =====================================
+   CONTACT
+   ===================================== */
+
+.contact-preview {
+    text-align: center;
+    padding: 80px 10%;
+}
+
+.contact-preview p {
+    max-width: 650px;
+    margin: 0 auto 15px;
+}
+
+.contact-details {
+    max-width: 700px;
+    margin: auto;
+    background: var(--white);
+    border: 1px solid rgba(185, 135, 135, 0.5);
+    border-radius: 18px;
+    padding: 30px 40px;
     text-align: center;
 }
 
-.contact p {
-    font-size: 16px;
-    line-height: 1.8;
-    margin-bottom: 30px;
+.contact-item {
+    padding: 22px 0;
+}
+
+.contact-item + .contact-item {
+    border-top: 1px solid var(--blush);
+}
+
+.contact-item h3 {
+    font-size: 24px;
+    margin: 0 0 8px;
+}
+
+.contact-item a {
+    color: #865B5B;
+    text-decoration: none;
     overflow-wrap: anywhere;
 }
 
-.contact a.btn {
-    margin-top: 0;
+.contact-item a:hover {
+    text-decoration: underline;
 }
 
-/* Footer */
+/* =====================================
+   FOOTER
+   ===================================== */
+
 footer {
-    background-color: var(--blush);
+    background: var(--blush);
+    padding: 28px 15px;
     text-align: center;
-    padding: 20px;
-    font-size: 14px;
-    line-height: 1.7;
+    border-top: 1px solid rgba(64, 54, 51, 0.1);
+    font-size: 13px;
+}
+
+footer p {
+    margin: 5px 0;
 }
 
 footer a {
     text-decoration: none;
-    margin: 0 5px;
+    margin: 0 8px;
 }
 
 footer a:hover {
+    color: #865B5B;
+}
+
+footer span {
     color: var(--rose);
 }
 
-/* Mobile Styling */
+/* =====================================
+   TABLET & MOBILE
+   ===================================== */
+
 @media screen and (max-width: 768px) {
 
     header {
@@ -276,11 +451,11 @@ footer a:hover {
 
     .site-nav {
         flex-direction: column;
-        gap: 18px;
+        gap: 15px;
     }
 
     .site-name {
-        font-size: 26px;
+        font-size: 32px;
     }
 
     .nav-links {
@@ -295,28 +470,50 @@ footer a:hover {
 
     .hero {
         min-height: 0;
-        padding: 55px 7%;
+        padding: 85px 7%;
     }
 
-    .about,
-    .skills,
-    .projects,
-    .contact {
-        padding: 48px 6%;
+    .page-intro {
+        min-height: 0;
+        padding: 80px 7%;
     }
 
-    .skills-container,
-    .projects-container {
+    .section {
+        padding: 55px 6%;
+    }
+
+    .two-columns,
+    .three-columns {
         grid-template-columns: 1fr;
     }
 
-    .skill-card,
-    .project-card {
-        padding: 24px;
+    .info-card {
+        padding: 25px;
+    }
+
+    .contact-preview {
+        padding: 65px 7%;
+    }
+
+    .contact-details {
+        padding: 20px;
+    }
+
+    .botanical-section::before {
+        width: 280px;
+        height: 280px;
+        left: -180px;
+        top: -170px;
+    }
+
+    .botanical-section::after {
+        width: 300px;
+        height: 200px;
+        right: -170px;
+        bottom: -140px;
     }
 }
 
-/* Smaller Phones */
 @media screen and (max-width: 360px) {
 
     .nav-links {
@@ -325,5 +522,19 @@ footer a:hover {
 
     .nav-links a {
         font-size: 14px;
+    }
+
+    .hero h1 {
+        font-size: 52px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+
+    .info-card {
+        transition: none;
     }
 }
