@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Projects | Mya Tate</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css?v=3">
 </head>
 <body>
 
@@ -16,137 +16,156 @@
             <a href="index.html">Home</a>
             <a href="about.html">About</a>
             <a href="experience.html">Experience</a>
-            <a href="projects.html">Projects</a>
+            <a href="projects.html" aria-current="page">Projects</a>
             <a href="contact.html">Contact</a>
         </div>
     </nav>
 </header>
 
 <main>
-
-    <section class="about">
-        <h1>My Projects</h1>
-
+    <section class="page-intro botanical-section">
+        <p class="eyebrow">MY WORK</p>
+        <h1>Projects & Coursework</h1>
+        <div class="heading-line"></div>
         <p>
-            Throughout my Computer Science studies,
-            I've worked on projects involving programming,
-            algorithms, data structures, and computer systems.
-        </p>
-
-        <p>
-            These projects highlight some of the skills
-            I've developed through my coursework
-            and hands-on experience.
+            A collection of programming projects
+            and technical skills developed throughout
+            my Computer Science studies.
         </p>
     </section>
 
-    <section class="skills">
-        <h2>Featured Work</h2>
+    <section class="section blush-section">
+        <div class="section-heading">
+            <p class="eyebrow">JAVA</p>
+            <h2>Computer Systems</h2>
+            <div class="heading-line"></div>
+        </div>
 
-        <div class="skills-container">
-
-            <div class="skill-card">
+        <div class="card-grid three-columns">
+            <article class="info-card">
                 <h3>TCP Client/Server Communication</h3>
-                <p>Java | CS 250</p>
                 <p>
                     Developed a networking program using
                     TCP sockets to exchange messages
                     between connected clients.
                 </p>
-            </div>
+                <span class="tag">Java | CS 250</span>
+            </article>
 
-            <div class="skill-card">
+            <article class="info-card">
                 <h3>Number System Converter</h3>
-                <p>Java | CS 250</p>
                 <p>
                     Created a program to perform number
                     system conversions and bitwise operations
                     using binary, decimal, and hexadecimal values.
                 </p>
-            </div>
+                <span class="tag">Java | CS 250</span>
+            </article>
 
-            <div class="skill-card">
+            <article class="info-card">
                 <h3>Memory Performance Analysis</h3>
-                <p>Java | CS 250</p>
                 <p>
                     Compared the performance of different
                     data structures and memory access patterns
                     by measuring execution times.
                 </p>
-            </div>
+                <span class="tag">Java | CS 250</span>
+            </article>
+        </div>
+    </section>
 
-            <div class="skill-card">
+    <section class="section cream-section">
+        <div class="section-heading">
+            <p class="eyebrow">PYTHON</p>
+            <h2>Algorithms & Data Structures</h2>
+            <div class="heading-line"></div>
+        </div>
+
+        <div class="card-grid three-columns">
+            <article class="info-card">
                 <h3>Knight's Tour</h3>
-                <p>Python | CS 320</p>
                 <p>
                     Used recursion and backtracking to find
                     a path for a knight to visit every square
                     on a chessboard without repeating a square.
                 </p>
-            </div>
+                <span class="tag">Python | CS 320</span>
+            </article>
 
-            <div class="skill-card">
+            <article class="info-card">
                 <h3>Binary Heap</h3>
-                <p>Python | CS 320</p>
                 <p>
                     Implemented a binary heap with insertion
                     and extraction operations to practice
                     working with priority queues.
                 </p>
-            </div>
+                <span class="tag">Python | CS 320</span>
+            </article>
 
-            <div class="skill-card">
+            <article class="info-card">
                 <h3>Longest Increasing Path</h3>
-                <p>Python | CS 320</p>
                 <p>
                     Worked with a torus-shaped grid to find
                     increasing paths using memoization
                     and neighboring cell comparisons.
                 </p>
-            </div>
+                <span class="tag">Python | CS 320</span>
+            </article>
 
-            <div class="skill-card">
+            <article class="info-card">
                 <h3>Trie Data Structure</h3>
-                <p>Python | CS 320</p>
                 <p>
                     Built a trie to store and search strings
                     using operations such as adding, removing,
                     and checking prefixes.
                 </p>
-            </div>
+                <span class="tag">Python | CS 320</span>
+            </article>
 
-            <div class="skill-card">
+            <article class="info-card">
                 <h3>Round Trip</h3>
-                <p>Python | CS 320</p>
                 <p>
                     Used the Bellman-Ford algorithm to find
                     routes through a graph while avoiding
                     reuse of edges on the return trip.
                 </p>
-            </div>
-
-            <div class="skill-card">
-                <h3>Personal Portfolio Website</h3>
-                <p>HTML & CSS | JTC 372</p>
-                <p>
-                    Designed and developed a personal career
-                    portfolio using HTML, CSS, and GitHub Pages
-                    to showcase my education, experience,
-                    and projects.
-                </p>
-            </div>
-
+                <span class="tag">Python | CS 320</span>
+            </article>
         </div>
     </section>
 
+    <section class="section blush-section">
+        <div class="section-heading">
+            <p class="eyebrow">WEB DESIGN</p>
+            <h2>Creative & Technical Work</h2>
+            <div class="heading-line"></div>
+        </div>
+
+        <div class="card-grid single-column">
+            <article class="info-card">
+                <h3>Personal Career Portfolio</h3>
+                <p>
+                    Designed and developed a responsive
+                    career portfolio using HTML, CSS,
+                    and GitHub Pages to showcase my
+                    education, professional experience,
+                    and programming projects.
+                </p>
+                <span class="tag">HTML & CSS | JTC 372</span>
+            </article>
+        </div>
+    </section>
 </main>
 
 <footer>
     <p>&copy; 2026 Mya Tate. All rights reserved.</p>
     <p>
-        <a href="mailto:tmya3387@gmail.com">tmya3387@gmail.com</a> |
-        <a href="contact.html">Contact</a> |
-        <a href="index.html">Back to Home</a>
+        <a href="mailto:tmya3387@gmail.com">Email</a>
+        <span>•</span>
+        <a href="tel:+12082413387">Phone</a>
+        <span>•</span>
+        <a href="https://www.linkedin.com/in/mya-tate-alec"
+           target="_blank" rel="noopener noreferrer">LinkedIn</a>
     </p>
 </footer>
 
